@@ -1,0 +1,111 @@
+.page-header {
+    border-bottom: 1px solid var(--border-cont);
+
+}
+.page-header__logo{
+    font-family: 'Raleway', suns-serif;
+    @include font(700, 26px, 1.19, 0.03em);
+    color: var(--main-color);
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.logo__text--black {
+    color: var(--accent-color);
+}
+.site-nav{
+    display: flex;
+    gap: 50px;
+}
+.page-header__navigation{
+   display: flex; 
+   align-items: center;
+}
+.page-header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.site-contacts{
+   display: flex;
+   gap: 30px;
+}
+.page-header__site-contacts{
+    margin-left: auto;
+}
+.site-nav__link{
+    position: relative;
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--main-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+    text-decoration: none;
+    color: currentColor;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+    color: var(--accent-color)
+}
+}
+ .site-nav__link--current{
+    color: var(--accent-color);
+    }
+    
+    .site-nav__link--current::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    bottom: -1px;
+    border-radius: 2px; 
+}
+    .site-contacts__link{
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--subtitle-colour);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+    .site-contacts__link{
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--subtitle-colour);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+        color: var(--accent-color);
+    }
+}
+
+.site-contacts__icon{
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+
+
+
+
+

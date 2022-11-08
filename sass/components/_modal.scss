@@ -1,0 +1,180 @@
+.backdrop{
+    position:fixed;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal{
+    width: 528px;
+    height: 581px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+}
+.backdrop.is-hidden .modal{
+    transform: translate(-50%,-50%) scale(0);
+}
+.modal-btn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-clost-icon:hover,
+.modal-clost-icon:focus {
+fill: var(--accent-color);
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-title{
+    @include font(700, 20px, 23px, 0.03em);
+    text-align: center;
+    margin-bottom: 12px;
+}
+.modal-field {
+    margin-bottom: 10px;
+}
+.modal-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 40px;
+    outline: transparent;
+    transition: background-color fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.input-wrap{
+    position: relative;
+}
+.modal-input-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    margin-left: 12px;
+    .modal-input:focus + & {
+        fill: var(--accent-color);
+    }
+}
+.modal-label-text,
+.modal-label{
+    font-style: normal;
+    @include font(400, 12px, 14px, 0.01em);
+    color: #757575;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.modal-comment{
+    width: 100%;
+    height: 120px;
+    left: 576px;
+    top: 518px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding-left: 16px;
+    padding-top: 12px;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.check-text{
+    display: flex;
+    font-size: 14px;
+    color: var(--subtitle-colour);
+    display: flex;
+    @include font(400, 14px, 24px, 0.03em);
+    color: var(--subtitle-colour);
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    span {
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--main-color);
+        border-radius: 2px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: transparent;
+    }
+    .input-check:checked + & span {
+        background-color: var(--accent-color);
+        border-color: transparent;
+        fill: var(--hero-title);
+    }
+    .input-check:focus + & span {
+    border-color: var(--accent-color);
+    }
+    
+}
+
+.check-cont{
+    color: var(--accent-color);
+    margin-left: 5px;
+    @include font(400, 14px, 24px, 0.03em);
+    text-underline-offset: 12%;
+
+}
+.form-checkbox{
+    padding-top: 20px;
+}
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font(null, 14px, 1.71, 0.03em);
+    color: var(--subtitle-colour);
+}
+.send-button{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 52px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    @include font(null, inherit, 1.88, 0.06em);
+    border: none;
+    color: var(--hero-title);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+    background-color: var(--btn-focus);
+}
+}

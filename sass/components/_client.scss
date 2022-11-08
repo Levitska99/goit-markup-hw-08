@@ -1,0 +1,41 @@
+.client{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.client-heading{
+    @include font(700, 36px, 42px, 0.03em);
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 50px;
+}
+.client-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.client-link{
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    background-color: var(--hero-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AFB1B8;
+    transition-property: border-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover, 
+    &:focus{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+}
+.client-icon{
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+

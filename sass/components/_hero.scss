@@ -1,0 +1,50 @@
+.hero-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+   }
+   .hero-section{
+       margin: 0 auto;
+       text-align: center;
+       align-items: center;
+       max-width: 1600px;
+       background-color: var(--hero-bg-col);
+       text-align: center;
+       background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
+       url(../image/fon.jpg);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+   
+   }
+   
+   .hero__title{
+       @include font(900, 44px, 1.36, 0.06em);
+       color: var(--hero-title);
+       text-transform: uppercase;
+       width: 696px;
+       margin: 0 auto;
+       
+     
+   }
+   .hero-btn-text{
+       font-family: inherit;
+       @include font(700, 16px, 1.81, 0.06em);
+       color: var(--hero-title);
+       background-color: var(--accent-color);
+       cursor: pointer;
+       border-radius: 4px;
+       border-color: transparent;
+       padding: 10px 32px;
+       margin-top: 30px;
+       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+       transition-property: background-color;
+       transition-duration: 250ms;
+       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+       &:hover,
+       &:focus{
+        background-color: var(--btn-focus);
+    }
+   }
+   .btn--large{
+    min-width: 216px
+   }
