@@ -41,15 +41,56 @@
                         <svg class="site-contacts__icon" width="10" height="16" >
                             <use href="./image/symbol-defs.svg#icon-smartphone01"></use>
                         </svg>
-                        +38 096 111 11 11</a></li>
+                        +38 096 111 11 11</a>
+                    </li>
                  </ul>
-             
-             
-        </div>
-   
+                 <button type="button" class="btn-mobile" data-menu-open>
+                    <svg class="btn-mobile__icon" width="40" height="40">
+                      <use href="./image/symbol-defs.svg#icon-menu_40px"></use>
+                    </svg>
+                  </button>
+                </div>
+             <div class="mob-menu is-hidden" data-menu>
+         <div class="container">
+            <button class="menu-close-btn" type="button" data-menu-close>
+               <svg width="40" height="40">
+                  <use href="./image/symbol-defs.svg#icon-close_40px"></use>
+               </svg>
+            </button>
+            <nav class="mob-menu__nav">
+               <ul class="mob-menu__list list">
+                  <li class="mob-menu__item"><a class="mob-menu__link link" href="./index.html">Студія</a>
+                  </li>
+                  <li class="mob-menu__item"><a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a>
+                  </li>
+                  <li class="mob-menu__item"><a class="mob-menu__link link" href="#">Контакти</a></li>
+               </ul>
+            </nav>
+            <div class="mob-menu-bottom">
+                <div class="mob-connect">
+                   <a class="mob-connect__tel link" href="tel:+380961111111">
+                      +38 096 111 11 11</a>
+                   <a class="mob-connect__link link" href="mailto:info@devstudio.com">
+                      info@devstudio.com</a>
+                </div>
+                <ul class="mob__soc-list list">
+                    <li class="mob__soc-item"><a class="mob__soc-link link" href="https://www.instagram.com">Instagram</a>
+                    </li>
+                    <li class="mob__soc-item"><a class="mob__soc-link link mob__soc-line"
+                          href="https://twitter.com">Twitter</a></li>
+                    <li class="mob__soc-item"><a class="mob__soc-link link mob__soc-line"
+                          href="https://www.facebook.com">Facebook</a>
+                    </li>
+                    <li class="mob__soc-item"><a class="mob__soc-link link mob__soc-line"
+                          href="https://www.linkedin.com/">Linkedin</a>
+                    </li>
+                 </ul>
+                </div>
+                </div>
+            </div>
     </header>
     
-    <main>
+    <!--<main>
         <section class="hero-section">
             <div class="container">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
@@ -410,7 +451,14 @@
          <button class="send-button" type="submit">Відправити</button>
     </form>
     </div>
-</div>
-      <script src="./js/modal.js"></script>  
+</div>-->
+      <script src="./js/modal.js"></script> 
+       <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script> 
     </body>
 </html>
