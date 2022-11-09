@@ -24,6 +24,16 @@
        width: 696px;
        margin: 0 auto;
        
+   @include mobile {
+    width: 360px;
+    font-size: 26px;
+ }
+
+@include desktop {
+ width: 696px;
+ font-size: 44px;
+ line-height: 1.36;
+}
      
    }
    .hero-btn-text{
@@ -44,6 +54,7 @@
        &:focus{
         background-color: var(--btn-focus);
     }
+    
    }
    .btn--large{
     min-width: 216px
