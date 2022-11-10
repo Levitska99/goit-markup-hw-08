@@ -813,8 +813,12 @@ body {
 }
 
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding: 94px 0 94px 0;
+  }
 }
 
 .client-heading {
@@ -826,16 +830,42 @@ body {
   color: var(--main-color);
   margin-bottom: 50px;
 }
+@media screen and (min-width: 1200px) {
+  .client-heading {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
 
 .client-item {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+}
+
+.client-list {
+  width: 100%;
+  background-color: var(--hero-title);
+}
+@media screen and (min-width: 480px) {
+  .client-list {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .client-list {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .client-link {
-  width: 170px;
   height: 92px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -851,6 +881,21 @@ body {
 .client-link:hover, .client-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .client-link {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client-link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-link {
+    width: 170px;
+  }
 }
 
 .client-icon {

@@ -1,22 +1,47 @@
 .client{
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding: 60px 0 60px 0;
+
+    @include desktop {
+       padding: 94px 0 94px 0;
+    }
+   
 }
 .client-heading{
     @include font(700, 36px, 42px, 0.03em);
     text-align: center;
     color: var(--main-color);
     margin-bottom: 50px;
+    @include desktop {
+        margin-bottom: 50px;
+        font-size: 36px;
+     }
 }
 .client-item{
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+
 }
-.client-link{
-    width: 170px;
-    height: 92px;
+.client-list{
+   width: 100%;
+    background-color: var(--hero-title);
+    
+  @include mobile {
+        width: calc((100% - 30px) / 2);
+     }
+
+  @include tablet {
+     width: calc((100% - 60px) / 3);
+  }
+
+  @include desktop {
+     width: calc((100% - 150px) / 6);
+  }
+}
+.client-link {
+   height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     background-color: var(--hero-title);
@@ -30,8 +55,18 @@
     &:hover, 
     &:focus{
     color: var(--accent-color);
-    border-color: var(--accent-color);
-}
+    border-color: var(--accent-color);}
+    @include mobile {
+      width: 210px;
+      
+   }
+      
+   @include tablet {
+      width: 226px;
+   }
+   @include desktop {
+      width: 170px;
+   }
 }
 .client-icon{
     width: 106px;
