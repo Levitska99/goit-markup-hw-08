@@ -14,23 +14,23 @@
        background-size: cover;
        height: 400px;
        background-image:var(--hero-bg-grad),
-       url(../../image/header-img-mob.jpg);
+       url(.././image/header-img-mob.jpg);
        @include retina{
         background-image:var(--hero-bg-grad),
-       url(../../image/header-img-mob-2х.jpg);
+       url(.././image/header-img-mob-2х.jpg);
        }
        @include tablet{
         background-image:var(--hero-bg-grad),
-        url(../../image/header-img-tab.jpg);
+        url(.././image/header-img-tab.jpg);
         height: 400px;
         @include retina{ 
             background-image: var(--hero-bg-grad),
-            url(../../image/header-img-tab-2x.jpg);
+            url(.././image/header-img-tab-2x.jpg);
         }
        }
        @include desktop{
         background-image:var(--hero-bg-grad),
-        url(../../image/header-img-desktop.jpg);
+        url(.././image/header-img-desktop.jpg);
         height: 600px;
         @include retina{
             background-image:var(--hero-bg-grad),
@@ -66,7 +66,6 @@
        cursor: pointer;
        border-radius: 4px;
        border-color: transparent;
-       padding: 10px 32px;
        margin-top: 30px;
        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
        transition-property: background-color;
@@ -75,6 +74,7 @@
        &:hover,
        &:focus{
         background-color: var(--btn-focus);
+    }
         @include mobile {
             font-size: 16px;
             width: 200px;
@@ -87,10 +87,8 @@
          }
     }
     
-   }
-   .btn--large{
-    min-width: 216px
-   }
+   
+   
    .hero-section{
     @include mobile{
         padding-top: 118px;

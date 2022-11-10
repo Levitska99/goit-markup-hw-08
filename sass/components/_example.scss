@@ -1,7 +1,9 @@
 .example {
     padding-top: 47px;
     padding-bottom: 94px;
-}
+    @media screen and (max-width: 1199px) {
+        display: none;
+}}
 .example-headline {
     @include font(700, 36px, 1.16, 0.03em);
     text-align: center;
