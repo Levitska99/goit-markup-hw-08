@@ -100,4 +100,8 @@
         padding-top: 118px;
         padding-bottom: 118px;
     }
+    @include desktop{
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
    }
