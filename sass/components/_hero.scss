@@ -9,12 +9,34 @@
        max-width: 1600px;
        background-color: var(--hero-bg-col);
        text-align: center;
-       background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
-       url(../image/fon.jpg);
-       background-repeat: no-repeat;
+    background-repeat: no-repeat;
        background-position: center;
        background-size: cover;
-   
+       height: 400px;
+       background-image:var(--hero-bg-grad),
+       url(../../image/header-img-mob.jpg);
+       @include retina{
+        background-image:var(--hero-bg-grad),
+       url(../../image/header-img-mob-2х.jpg);
+       }
+       @include tablet{
+        background-image:var(--hero-bg-grad),
+        url(../../image/header-img-tab.jpg);
+        height: 400px;
+        @include retina{ 
+            background-image: var(--hero-bg-grad),
+            url(../../image/header-img-tab-2x.jpg);
+        }
+       }
+       @include desktop{
+        background-image:var(--hero-bg-grad),
+        url(../../image/header-img-desktop.jpg);
+        height: 600px;
+        @include retina{
+            background-image:var(--hero-bg-grad),
+            url(../../image/header-img-desktop-2x.jpg);
+        }
+       }
    }
    
    .hero__title{
@@ -53,9 +75,29 @@
        &:hover,
        &:focus{
         background-color: var(--btn-focus);
+        @include mobile {
+            font-size: 16px;
+            width: 200px;
+            height: 50px;
+         }
+      
+         @include desktop {
+            font-size: 16px;
+            width: 216px;
+         }
     }
     
    }
    .btn--large{
     min-width: 216px
+   }
+   .hero-section{
+    @include mobile{
+        padding-top: 118px;
+    padding-bottom: 118px;
+    }
+    @include tablet{
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
    }

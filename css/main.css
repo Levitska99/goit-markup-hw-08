@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -25,6 +26,7 @@
   --border-cont: #EEEEEE;
   --soc-link: #AFB1B8;
   --hero-bg-col: #C4C4C4;
+  --hero-bg-grad: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4));
 }
 
 p,
@@ -470,10 +472,38 @@ body {
   max-width: 1600px;
   background-color: var(--hero-bg-col);
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/fon.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 400px;
+  background-image: var(--hero-bg-grad), url(../../image/header-img-mob.jpg);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: var(--hero-bg-grad), url(../../image/header-img-mob-2х.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: var(--hero-bg-grad), url(../../image/header-img-tab.jpg);
+    height: 400px;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: var(--hero-bg-grad), url(../../image/header-img-tab-2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-section {
+    background-image: var(--hero-bg-grad), url(../../image/header-img-desktop.jpg);
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: var(--hero-bg-grad), url(../../image/header-img-desktop-2x.jpg);
+  }
 }
 
 .hero__title {
@@ -521,9 +551,35 @@ body {
 .hero-btn-text:hover, .hero-btn-text:focus {
   background-color: var(--btn-focus);
 }
+@media screen and (min-width: 480px) {
+  .hero-btn-text:hover, .hero-btn-text:focus {
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-btn-text:hover, .hero-btn-text:focus {
+    font-size: 16px;
+    width: 216px;
+  }
+}
 
 .btn--large {
   min-width: 216px;
+}
+
+@media screen and (min-width: 480px) {
+  .hero-section {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 .section-advantages {
