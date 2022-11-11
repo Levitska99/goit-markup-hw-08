@@ -1070,6 +1070,9 @@ body {
   }
 }
 
+.footer-address {
+  margin-top: 20px;
+}
 @media screen and (max-width: 1199px) {
   .footer-address {
     text-align: center;
@@ -1203,9 +1206,16 @@ body {
 .subscription {
   display: flex;
 }
+@media screen and (max-width: 1199px) {
+  .subscription {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .form-email {
-  width: 358px;
+  width: 450px;
   padding: 15px 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -1218,6 +1228,11 @@ body {
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .form-email {
+    width: 358px;
+  }
 }
 
 .footer-btn {
