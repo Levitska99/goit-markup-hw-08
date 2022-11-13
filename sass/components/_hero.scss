@@ -1,15 +1,14 @@
 .hero-section {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px
    }
    .hero-section{
        margin: 0 auto;
        text-align: center;
        align-items: center;
-       max-width: 1600px;
        background-color: var(--hero-bg-col);
        text-align: center;
-    background-repeat: no-repeat;
+       background-repeat: no-repeat;
        background-position: center;
        background-size: cover;
        height: 400px;
@@ -28,25 +27,26 @@
             url(.././image/header-img-tab-2x.jpg);
         }
        }
-       @include desktop{
+       @include desktop {
+       max-width: 1600px;
         background-image:var(--hero-bg-grad),
         url(.././image/header-img-desktop.jpg);
         height: 600px;
         @include retina{
             background-image:var(--hero-bg-grad),
-            url(../../image/header-img-desktop-2x.jpg);
+            url(.././image/header-img-desktop-2x.jpg);
         }
        }
    }
    
    .hero__title{
-       @include font(900, 44px, 1.36, 0.06em);
+       @include font(900, 26px, 1.62, 0.06em);
        color: var(--hero-title);
        text-transform: uppercase;
-       width: 696px;
        margin: 0 auto;
+     
        
-   @include mobile {
+    @include tablet {
     width: 360px;
     font-size: 26px;
  }
@@ -59,6 +59,9 @@
      
    }
    .hero-btn-text{
+       min-width: 200px;
+       padding: 10px 24px;
+       height: 50px;
        font-family: inherit;
        @include font(700, 16px, 1.81, 0.06em);
        color: var(--hero-title);
@@ -77,7 +80,6 @@
     }
         @include mobile {
             font-size: 16px;
-            width: 200px;
             height: 50px;
          }
       

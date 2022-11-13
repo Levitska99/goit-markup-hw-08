@@ -7,9 +7,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: auto;
+   
 }
 .modal{
+    padding: 40px;
     width: 100%;
     background-color: #FFFFFF;
     position: absolute;
@@ -21,8 +22,10 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     padding: 40px;
+    
     @include mobile {
         width: 450px;
+    
       }
     
       @include desktop {

@@ -59,7 +59,7 @@
             </button>
             <nav class="mob-menu__nav">
                <ul class="mob-menu__list list">
-                  <li class="mob-menu__item"><a class="mob-menu__link link" href="./index.html">Студія</a>
+                  <li class="mob-menu__item"><a class="mob-menu__link link current" href="./index.html">Студія</a>
                   </li>
                   <li class="mob-menu__item"><a class="mob-menu__link link" href="./portfolio.html">Портфоліо</a>
                   </li>
@@ -180,10 +180,13 @@
             <h2 class="team-title">Наша команда</h2>
         <ul class="team-item">
             <li class="team-list list">
-               <img src="./image/igor.jpg" 
-               alt="дизайнер продукту Ігор Дем'яненко" 
-               >
-               <div class="team-list-content">
+                <picture>
+                    <source srcset="./image/product-designer-desk.jpg 1x, ./image/product-designer-desk-2x.jpg 2x"media="(min-width: 1600px)">
+                    <source srcset="./image/product-designer-tab.jpg 1x, ./image/product-designer-tab-2x.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./image/product-designer-mob.jpg 1x, ./image/product-designer-mob-2x.jpg 2x" media="(max-width: 767px)">
+                    <img src="./image/igor.jpg" alt="дизайнер продукту Ігор Дем'яненко">
+                </picture>
+            <div class="team-list-content">
                 <h3 class="team-subtitle">Ігор Дем'яненко</h3>
                 <p class="team-text">Product Designer</p>
                 <ul class="team-soc-list list">
@@ -210,9 +213,12 @@
                
             </li>
             <li class="team-list list">
-               <img src="./image/olga.jpg" 
-               alt="Фронтенд розробник Ольга Рєпіна" 
-               >
+                <picture>
+                    <source srcset="./image/frontend-developer-desk.jpg 1x,./image/frontend-developer-desk-2x.jpg 2x" media="(min-width: 1600px)">
+                    <source srcset="./image/frontend-developer-tab.jpg 1x, ./image/frontend-developer-tab-2x.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./image/frontend-developer-mob.jpg 1x, ./image/frontend-developer-mob-2x.jpg 2x" media="(max-width: 767px)">
+                    <img src="./image/olga.jpg" alt="Фронтенд розробник Ольга Рєпіна" >
+                </picture>
                <div class="team-list-content">
                 <h3 class="team-subtitle">Ольга Рєпіна</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -237,12 +243,14 @@
                 </li>
                 </ul>
             </div>
-               
             </li>
             <li class="team-list list">
-                <img src="./image/mukola.jpg" 
-                alt="Маркетинг Микола Тарасов" 
-                >
+                <picture>
+                    <source srcset="./image/marketing-desk.jpg 1x, ./image/marketing-desk-2x.jpg 2x"  media="(min-width: 1600px)">
+                    <source srcset="./image/marketing-tab.jpg 1x, ./image/marketing-tab-2x.jpg 2x" media="(min-width: 768px)">
+                    <source srcset="./image/marketing-mob.jpg 1x, ./image/marketing-mob-2x.jpg 2x "media="(max-width: 767px)">
+                    <img src="./image/mukola.jpg" alt="Маркетинг Микола Тарасов">
+                </picture>
                 <div class="team-list-content">
                 <h3 class="team-subtitle">Микола Тарасов</h3>
                 <p class="team-text">Marketing</p>
@@ -267,12 +275,14 @@
                 </li>
                 </ul>
                 </div>
-                
             </li>
             <li class="team-list list">
-                <img src="./image/muhailo.jpg" 
-                alt="Дизайнер Михайло Єрмаков" 
-                >
+                <picture>
+                    <source srcset="./image/ui-designer-desk.jpg 1x, ./image/ui-designer-desk-2x.jpg 2x"media="(min-width: 1600px)">
+                    <source srcset="./image/ui-designer-tab.jpg 1x, ./image/ui-designer-tab-2x.jpg 2x,"media="(min-width: 768px)">
+                    <source srcset="./image/ui-designer-mob.jpg 1x, ./image/ui-designer-mob-2x.jpg 2x"media="(max-width: 767px)">
+                    <img src="./image/muhailo.jpg" alt="Дизайнер Михайло Єрмаков">
+                </picture>
                 <div class="team-list-content">
                  <h3 class="team-subtitle">Михайло Єрмаков</h3>
                  <p class="team-text">UI Designer</p>
@@ -297,7 +307,6 @@
                 </li>
                 </ul>
                 </div>
-                
             </li>
         </ul>
         </div>
@@ -388,7 +397,7 @@
             </form>
         </div>
     </div>
-    </footer>-->
+    </footer>
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
         <button type="button" data-modal-close class="modal-btn">
