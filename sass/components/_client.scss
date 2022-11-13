@@ -55,23 +55,12 @@
     &:focus{
     color: var(--accent-color);
     border-color: var(--accent-color);}
-    @include mobile {
-      width: 210px;
-      
-   }
-      
-   @include tablet {
-      width: 226px;
-   }
-   @include desktop {
-      width: 170px;
-   }
+   
 }
 .client-icon{
-    width: 106px;
-    height: 60px;
     fill: currentColor;
 }
+
 .mob-menu__link.current{
    color: var(--accent-color);
 }
