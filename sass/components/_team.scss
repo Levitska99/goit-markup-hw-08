@@ -29,10 +29,13 @@
  }
 }
 .team-title {
-    @include font(700, 36px, 1.16, 0.03em);
+    @include font(700, 28px, 1.16, 0.03em);
     text-align: center;
     color: var(--main-color);
     margin-bottom: 50px;
+    @include tablet{
+        font-size: 28px;
+    }
     @include desktop {
         margin-bottom: 50px;
         font-size: 36px;

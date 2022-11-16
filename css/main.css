@@ -46,6 +46,8 @@ ul, p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
   width: 100%;
 }
 
@@ -780,12 +782,17 @@ body {
 
 .team-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-color);
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .team-title {
+    font-size: 28px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .team-title {
@@ -867,12 +874,17 @@ body {
 
 .client-heading {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 42px;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--main-color);
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .client-heading {
+    font-size: 28px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .client-heading {
@@ -891,6 +903,7 @@ body {
 
 .client-list {
   background-color: var(--hero-title);
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .client-list {
@@ -939,14 +952,20 @@ body {
 }
 
 .subject {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .subject {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .subject-btn {
   font-family: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   border-radius: 4px;
@@ -954,7 +973,7 @@ body {
   color: var(--main-color);
   background-color: var(--background-btn-port);
   cursor: pointer;
-  padding: 6px 25px;
+  padding: 4px 20px;
   transition-property: box-shadow, background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -964,19 +983,55 @@ body {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+@media screen and (min-width: 480px) {
+  .subject-btn {
+    padding: 6px 25px;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subject-btn {
+    text-align: center;
+  }
+}
 
 .subject-item {
   display: flex;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  gap: 8px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 480px) {
+  .subject-item {
+    margin-bottom: 40px;
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subject-item {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subject-item {
+    margin-bottom: 50px;
+  }
 }
 
 .projects-item {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .projects-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .projects-link {
@@ -1039,6 +1094,26 @@ body {
 }
 .projects-list:hover .project-top-text {
   transform: translateY(0);
+}
+@media screen and (min-width: 480px) {
+  .project-top-text {
+    padding: 64px 24px;
+  }
+}
+
+.projects-item > .projects-list {
+  background-color: #ffffff;
+  outline: 1px solid #eeeeee;
+}
+@media screen and (min-width: 768px) {
+  .projects-item > .projects-list {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-item > .projects-list {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .footer {
@@ -1260,6 +1335,16 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
 }
+@media screen and (min-width: 480px) {
+  .form-email {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form-email {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .form-email {
     width: 358px;
@@ -1282,7 +1367,6 @@ body {
   border-radius: 4px;
   margin-left: 12px;
   align-items: center;
-  width: 200px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-btn:hover, .footer-btn:focus {
